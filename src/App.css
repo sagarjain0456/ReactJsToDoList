@@ -1,38 +1,101 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin:0px;
+  padding: 0px;
+}
+
+#todolist-heading{
+  color:orange;
+  font-size: 60px;
   text-align: center;
+  margin-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App li {
+  color: green;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+  max-width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#add-btn{
+  color:red;
+  background-color: black;
+  display:block;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-size: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#input-bar{
+  height: 50px; 
+  width: 80vw;
+  display: block;
+  margin: 0 auto;
+}
+
+#delete-btn{
+  width:100px;
+  height:50px;
+  color:white;
+  background-color: black;
+  font-size: 25px;
+  border-radius: 13px;
+  margin-left: 20px;
+  flex:none;
+}
+
+ul{
+  display:flex;
+  flex-wrap: wrap; /* enable wrapping */
+  flex-direction: column; /* set the flex direction to column */
+}
+
+#list-btn-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border: 5px solid orange; */
+  padding: 10px;
+  margin-top: 50px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#list-btn-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#list-btn-container li {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+#list-btn-container button {
+  width: 100px;
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media only screen and (max-width: 600px) {
+  #todolist-heading{
+    color:green;
+    font-size: 40px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
 }
