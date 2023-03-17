@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function TodoList() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const storedTodos = localStorage.getItem('todos');
+    return storedTodos ? JSON.parse(storedTodos) : [];
+  });
   const [todoInput, setTodoInput] = useState('');
 
   const handleAddTodo = () => {
@@ -20,6 +23,13 @@ function TodoList() {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
+
+
+
+    // Save todos to localStorage whenever they change
+    useEffect(() => {
+      localStorage.setItem('todos', JSON.stringify(todos));
+    }, [todos]);
 
 
   return (
