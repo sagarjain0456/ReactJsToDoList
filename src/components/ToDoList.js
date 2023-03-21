@@ -8,7 +8,7 @@ function TodoList() {
   const [todoInput, setTodoInput] = useState('');
 
   const handleAddTodo = () => {
-    setTodos([...todos, todoInput]);
+    setTodos([...todos, {todoInput, completed: false}]);
     setTodoInput('');
   };
 
@@ -24,6 +24,13 @@ function TodoList() {
     setTodos(newTodos);
   };
 
+
+
+    const handleToggleTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos[index].completed = !newTodos[index].completed;
+    setTodos(newTodos);
+  };
 
 
     // Save todos to localStorage whenever they change
@@ -48,7 +55,20 @@ function TodoList() {
       <ul>
   {todos.map((todo, index) => (
     <div id="list-btn-container" key={index}>
-      <ul><li>{todo}</li></ul>
+      <ul>
+      <li>
+
+      <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={() => handleToggleTodo(index)}
+        />
+
+
+
+      {todo}
+      </li>
+      </ul>
       <button id="delete-btn" onClick={() => handleDeleteTodo(index)}>Delete</button>
     </div>
   ))}
