@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+  margin:0px;
+  padding: 0px;
+}
+
+#todolist-heading{
+  color:orange;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.App li {
+  color: green;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+#add-btn{
+  color:red;
+  background-color: black;
+  display:block;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+#input-bar{
+  height: 50px; 
+  width: 80vw;
+  display: block;
+  margin: 0 auto;
+}
+
+#delete-btn{
+  width:100px;
+  height:50px;
+  color:white;
+  background-color: black;
+  font-size: 25px;
+  border-radius: 13px;
+  margin-left: 20px;
+  flex:none;
+}
+
+ul{
+  display:flex;
+  flex-wrap: wrap; /* enable wrapping */
+  flex-direction: column; /* set the flex direction to column */
+}
+
+#list-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 5px solid orange; */
+  padding: 10px;
+  margin-top: 50px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#list-btn-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#list-btn-container li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#list-btn-container button {
+  width: 100px;
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #todolist-heading{
+    color:green;
+    font-size: 40px;
+  }
+  
+}
